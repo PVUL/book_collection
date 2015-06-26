@@ -1,0 +1,21 @@
+<h4>Add New Book</h4>
+<%= link_to 'Back to Book Collection', books_path %>
+
+<%= form_for @book do |f| %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Genre</th>
+    </tr>
+
+    <tr>
+      <td><%= f.text_field :title %></td>
+      <td><%= f.text_field :author %></td>
+      <td><%= f.text_field :isbn %></td>
+      <td><%= f.text_field :genre %></td>
+      <td><%= f.submit "Submit" %></td>
+    </tr>
+  </table>
+<%- end -%>

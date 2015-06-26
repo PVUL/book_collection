@@ -1,1 +1,23 @@
-this is a test
+<h4>Book Collection</h4>
+<%= link_to 'Add New Book', new_book_path %>
+
+<%- if !@books.empty? -%>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Genre</th>
+    </tr>
+
+    <%- @books.each do |book| -%>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.isbn %></td>
+        <td><%= book.genre %></td>
+        <td><%= link_to 'delete', book_path(book), method: :delete %></td>
+      </tr>
+    <%- end -%>
+  </table>
+<%- end -%>
