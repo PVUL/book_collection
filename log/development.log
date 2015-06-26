@@ -9115,3 +9115,720 @@ Processing by BooksController#index as HTML
   [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
   Rendered books/index.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 128ms (Views: 126.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:01:55 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 119ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:02:07 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 02:02:37 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-06-26 02:04:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 400ms (Views: 374.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:04:17 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:04:20 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:05:59 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  Rendered books/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (35.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:05:59 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (36.4ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:06:39 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.5ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (29.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:06:41 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (36.2ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:06:43 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:06:45 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.6ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (28.1ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:06:45 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+... @book.title, book_path(book) );@output_buffer.safe_append='...
+...                               ^
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/paulyun/challenges/week6/book_collection/app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/books/show.html.erb:13: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/books/show.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/books/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:07:16 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x007fe6ea17a308>:0x007fe6e8ce6d10>):
+    14:         <td><%= @book.author %></td>
+    15:         <td><%= @book.isbn %></td>
+    16:         <td><%= @book.genre %></td>
+    17:         <td><%= link_to 'delete', book_path(book), method: :delete %></td>
+    18:       </tr>
+    19:   </table>
+  app/views/books/show.html.erb:17:in `_app_views_books_show_html_erb___465683247162579715_70314862521640'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (14.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:07:18 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (1.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:07:19 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x007fe6ea17a308>:0x007fe6e8bdc4d8>):
+    14:         <td><%= @book.author %></td>
+    15:         <td><%= @book.isbn %></td>
+    16:         <td><%= @book.genre %></td>
+    17:         <td><%= link_to 'delete', book_path(book), method: :delete %></td>
+    18:       </tr>
+    19:   </table>
+  app/views/books/show.html.erb:17:in `_app_views_books_show_html_erb___465683247162579715_70314873075880'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (34.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:07:20 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x007fe6ea17a308>:0x007fe6e8c0bd00>):
+    14:         <td><%= @book.author %></td>
+    15:         <td><%= @book.isbn %></td>
+    16:         <td><%= @book.genre %></td>
+    17:         <td><%= link_to 'delete', book_path(book), method: :delete %></td>
+    18:       </tr>
+    19:   </table>
+  app/views/books/show.html.erb:17:in `_app_views_books_show_html_erb___465683247162579715_70314862521640'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (34.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:07:31 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 128ms (Views: 125.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:07:31 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:07:48 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:07:48 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:07:49 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:07:51 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:07:52 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 130ms (Views: 129.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/26" for ::1 at 2015-06-26 02:07:55 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/books/26" for ::1 at 2015-06-26 02:08:01 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kkm3ELDb6wWr2FmbU9fKU90kAP8pb0VsZuNbyuD35oWjcxo7X6y/y5fWY2yjBApvQUhuJH6k422Hl15zUG/rGQ==", "id"=>"26"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 26]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:08:01 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 122ms (Views: 120.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:08:20 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:08:27 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9qje5XBh8D0Tg0tE+TJ+GNHV8GPDEFIoiaeEIIQ54ui4A5QerbTDshAN9rjNwnE/ys5GtjH50lDUpupMojqFw==", "book"=>{"title"=>"Harry Potter", "author"=>"JK Rowling", "isbn"=>"", "genre"=>""}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Harry Potter"], ["author", "JK Rowling"], ["isbn", ""], ["genre", ""], ["created_at", "2015-06-26 06:08:27.820122"], ["updated_at", "2015-06-26 06:08:27.820122"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:08:27 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 128ms (Views: 126.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:08:29 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 111ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:08:35 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PV0Cz3BPi261SPvCaSNAlbo7Gz6g2F9+m7JlFcFVqAwMZ6/knzjfoIlGwTWZ8ICpJld15fcT+X96xmCscc2lkA==", "book"=>{"title"=>"Curious George", "author"=>"", "isbn"=>"", "genre"=>""}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Curious George"], ["author", ""], ["isbn", ""], ["genre", ""], ["created_at", "2015-06-26 06:08:35.322343"], ["updated_at", "2015-06-26 06:08:35.322343"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:08:35 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 103ms (Views: 101.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:08:37 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 111ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:09:12 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N7T5GhIvsT6Xl7VDLIIYuLkJvPGS26O9zMBcPcAYRToGjlQx/Vjl8KuZj7TcUdiEJWXSKsUQBbwttFmEcIBIpg==", "book"=>{"title"=>"Intro to Programming ", "author"=>"Chris Pines", "isbn"=>"0000", "genre"=>"Technology"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Intro to Programming "], ["author", "Chris Pines"], ["isbn", "0000"], ["genre", "Technology"], ["created_at", "2015-06-26 06:09:12.402206"], ["updated_at", "2015-06-26 06:09:12.402206"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:09:12 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/29" for ::1 at 2015-06-26 02:09:16 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  Rendered books/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:09:20 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 116ms (Views: 113.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:09:29 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 100ms (Views: 97.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:09:31 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 109ms (Views: 107.4ms | ActiveRecord: 1.0ms)
