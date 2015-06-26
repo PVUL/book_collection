@@ -1,0 +1,14 @@
+<%= form_for [@book, @review] do |f| %>
+  <table>
+    <tr>
+      <th>Rating</th>
+      <th>Review</th>
+    </tr>
+
+    <tr>
+      <td><%= f.text_field :rating %></td>
+      <td><%= f.text_field :body %></td>
+      <td><%= f.submit "Submit" %></td>
+    </tr>
+  </table>
+<%- end -%>
