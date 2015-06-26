@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This a book collection app that has the following req's:
 
-Things you may want to cover:
+Primary:
 
-* Ruby version
+* A book must have a title, author, ISBN and genre.
 
-* System dependencies
+* Visiting /books should have a list of all the books.
 
-* Configuration
+* Visiting /books/new should let a user add a new book with a form.
 
-* Database creation
+* Visiting /books/3 should let the user see the details of a book with id 3.
 
-* Database initialization
+* Visiting the root path lets the use see all the books.
 
-* How to run the test suite
+Secondary:
 
-* Services (job queues, cache servers, search engines, etc.)
+* A book can have many reviews. Each review is a number between 1 and 100, a body (text of review) and timestamp of when it was created.
 
-* Deployment instructions
+* Visiting /books/3/reviews/new lets a user create a review for book with id 3 in a form.
 
-* ...
+* Visiting /books/3 should have all the reviews.
 
+Start a new rails app with the following:
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt>$ rails new book_reviews --database=postgresql -T</tt>
