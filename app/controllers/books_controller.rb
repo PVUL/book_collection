@@ -18,6 +18,8 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params[:id])
+    @review = Review.new
+    @reviews = @book.reviews
   end
 
   def destroy
@@ -34,5 +36,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :author, :isbn, :genre)
   end
-
 end

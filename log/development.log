@@ -9832,3 +9832,2781 @@ Processing by BooksController#index as HTML
   [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
   Rendered books/index.html.erb within layouts/application (3.3ms)
 Completed 200 OK in 109ms (Views: 107.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:12:40 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 117ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:12:49 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ei/VkfxymRZ63sccWTm8tWWjck9VJTS2D9Z6ClJaNLE0hJ9qIaeqmXlQeuBtybOSfrjEmqfMtM5S1xRmdFlTg==", "book"=>{"title"=>"new book", "author"=>"new author", "isbn"=>"isbn", "genre"=>"genre"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "new book"], ["author", "new author"], ["isbn", "isbn"], ["genre", "genre"], ["created_at", "2015-06-26 06:12:49.507878"], ["updated_at", "2015-06-26 06:12:49.507878"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:12:49 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/books/28" for ::1 at 2015-06-26 02:12:59 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4OEJNpZFdtVIAJNCFMjsyQ6uJKl2WzqSBkZl+BBnERjR26QdeTIiG3QOqbXkGyz1ksJKciGQnJPnMmBBoP8chA==", "id"=>"28"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 28]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:12:59 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 108ms (Views: 106.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/30" for ::1 at 2015-06-26 02:13:03 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered books/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:13:07 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:13:31 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 111.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:13:33 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:13:49 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered books/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateReviews (20150626032339)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (12.9ms)[0m  DROP TABLE "reviews"
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20150626032339"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'books'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20150626032339)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "reviews" ("id" serial primary key, "rating" character varying, "body" character varying, "book_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150626032339"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'books'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:27:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 459ms (Views: 434.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:27:08 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (3.2ms)
+  Rendered books/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h4>Add New Review</h4>
+    2: <%= link_to 'Back to Book Details', book_path(@book) %>
+    3: 
+    4: <%= form_for @review do |f| %>
+    5:   <table>
+    6:     <tr>
+    7:       <th>Rating</th>
+  app/views/reviews/_new.html.erb:4:in `_app_views_reviews__new_html_erb__3552521003767978986_70162159207600'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___4031896068983848276_70162210239100'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (33.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:27:08 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.0ms)
+  Rendered books/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h4>Add New Review</h4>
+    2: <%= link_to 'Back to Book Details', book_path(@book) %>
+    3: 
+    4: <%= form_for @review do |f| %>
+    5:   <table>
+    6:     <tr>
+    7:       <th>Rating</th>
+  app/views/reviews/_new.html.erb:4:in `_app_views_reviews__new_html_erb__3552521003767978986_70162210879000'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___4031896068983848276_70162210776220'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (24.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (40.1ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:28:59 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 116ms (Views: 114.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:28:59 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 117ms (Views: 115.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:01 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.4ms)
+  Rendered books/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <h4>Add New Review</h4>
+    2: <%= link_to 'Back to Book Details', book_path(@book) %>
+    3: 
+    4: <%- if !@review.empty? -%>
+    5:   <%= form_for @review do |f| %>
+    6:     <table>
+    7:       <tr>
+  app/views/reviews/_new.html.erb:4:in `_app_views_reviews__new_html_erb__3552521003767978986_70162212103480'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___4031896068983848276_70162210239100'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (25.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:01 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.0ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <h4>Add New Review</h4>
+    2: <%= link_to 'Back to Book Details', book_path(@book) %>
+    3: 
+    4: <%- if !@review.empty? -%>
+    5:   <%= form_for @review do |f| %>
+    6:     <table>
+    7:       <tr>
+  app/views/reviews/_new.html.erb:4:in `_app_views_reviews__new_html_erb__3552521003767978986_70162210029140'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___4031896068983848276_70162210776220'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:12 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 135ms (Views: 133.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:29:12 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:19 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.6ms)
+  Rendered books/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 106ms (Views: 104.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:20 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.1ms)
+  Rendered books/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 126ms (Views: 124.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:21 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.2ms)
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 121ms (Views: 119.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:29:22 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:29:24 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered reviews/_new.html.erb (0.1ms)
+  Rendered books/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:29:25 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered reviews/_new.html.erb (0.2ms)
+  Rendered books/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:29:36 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered reviews/_new.html.erb (0.6ms)
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 140ms (Views: 138.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:29:36 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:29:38 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 119ms (Views: 117.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:29:39 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.6ms)
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.3ms)
+  [1m[36mReview Load (1.3ms)[0m  [1mSELECT "reviews".* FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", "99"], ["body", "this was good"], ["created_at", "2015-06-26 06:30:50.632920"], ["updated_at", "2015-06-26 06:30:50.632920"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36mReview Load (0.8ms)[0m  [1mSELECT "reviews".* FROM "reviews"[0m
+  [1m[35mReview Load (1.4ms)[0m  SELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."id" ASC LIMIT 1
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:31:30 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 126ms (Views: 124.8ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "reviews" SET "book_id" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3  [["book_id", 19], ["updated_at", "2015-06-26 06:31:43.128759"], ["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mReview Load (0.7ms)[0m  SELECT "reviews".* FROM "reviews"
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:31:56 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.0ms)
+  Rendered books/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 120ms (Views: 118.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:31:57 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 111ms (Views: 109.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:31:59 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.0ms)
+  Rendered books/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:32:02 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:32:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.6ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.4ms)
+  Rendered books/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 465ms (Views: 424.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:32:09 -0400
+  [1m[36mReview Load (0.7ms)[0m  [1mSELECT "reviews".* FROM "reviews"[0m
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mReview Load (0.9ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  ORDER BY "reviews"."id" ASC LIMIT 1[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:33:32 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 87ms (Views: 85.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:33:33 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.4ms)
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:33:38 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 110ms (Views: 108.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:33:39 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered reviews/_new.html.erb (0.0ms)
+  Rendered books/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:33:49 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:33:50 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered reviews/_new.html.erb (4.2ms)
+  Rendered books/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `pry' for #<Binding:0x007fec91796f50>):
+    1: <% binding.pry %>
+    2: <%- if !@review.nil? -%>
+    3: 
+    4:   <%= form_for @review do |f| %>
+  app/views/reviews/_new.html.erb:1:in `_app_views_reviews__new_html_erb___3470562348381505704_70327014881860'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___2068492860383130573_70327012978840'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:33:50 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered reviews/_new.html.erb (2.9ms)
+  Rendered books/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `pry' for #<Binding:0x007fec9127cc90>):
+    1: <% binding.pry %>
+    2: <%- if !@review.nil? -%>
+    3: 
+    4:   <%= form_for @review do |f| %>
+  app/views/reviews/_new.html.erb:1:in `_app_views_reviews__new_html_erb___3470562348381505704_70327012149280'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___2068492860383130573_70326968852280'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (29.6ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:34:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  Rendered reviews/_new.html.erb (75542.9ms)
+  Rendered books/show.html.erb within layouts/application (75550.7ms)
+Completed 500 Internal Server Error in 75605ms (ActiveRecord: 6.5ms)
+
+SystemExit (exit):
+  app/views/reviews/_new.html.erb:1:in `_app_views_reviews__new_html_erb___3174096266216051284_70263988016360'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb__3264842837530197656_70263988209220'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (27.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (55.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:36:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 493ms (Views: 467.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:06 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.7ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (4.8ms)
+  Rendered books/show.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for @review do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217771984980'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217775568440'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (20.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (50.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:06 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.0ms)
+  Rendered books/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for @review do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217776568060'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217776448920'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (36.1ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:34 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (3.0ms)
+  Rendered books/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217743123180'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217776448920'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:36:37 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 141ms (Views: 139.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:38 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.1ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217714984640'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217775568440'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (29.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:38 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (3.4ms)
+  Rendered books/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217743123180'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217776448920'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (33.2ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:36:39 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (3.5ms)
+  Rendered books/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217714984640'
+  app/views/books/show.html.erb:21:in `_app_views_books_show_html_erb___396026075926408230_70217775568440'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (19.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (41.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:37:13 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 180ms (Views: 169.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:37:14 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (36.7ms)
+  Rendered books/show.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 167ms (Views: 151.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:37:29 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 126ms (Views: 124.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:37:29 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:37:56 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.2ms)
+  Rendered books/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 162ms (Views: 140.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:37:56 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:38:00 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 129ms (Views: 127.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:38:01 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:38:05 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:38:13 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 135ms (Views: 133.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:38:19 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"muKxU5MVAwT7Yd4eQpBo8fTf1fzhqZRJ+AmAqcqVm/6r2Bx4fGJXysdv5OmyQ6jNaLO7J7ZiMkgZfYUQeg2WYg==", "review"=>{"rating"=>"99", "body"=>"test"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", "99"], ["body", "test"], ["created_at", "2015-06-26 06:38:19.622471"], ["updated_at", "2015-06-26 06:38:19.622471"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.1ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :id=>nil} missing required keys: [:id]):
+  app/controllers/reviews_controller.rb:12:in `create'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (47.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:40:23 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (3.6ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.8ms)
+  Rendered books/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 170ms (Views: 141.0ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:40:28 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SUk7ncFyRYIVeNTAfNUKgB4ADZh9ZJtr2NBIpLGvxfcH4nFmHKd2DRb2aTxIJQWnBRu7TY+NGxOF0SbIl6yiw==", "review"=>{"rating"=>"99", "body"=>"asdf"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (1.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.9ms)[0m  INSERT INTO "reviews" ("rating", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["rating", "99"], ["body", "asdf"], ["created_at", "2015-06-26 06:40:28.104210"], ["updated_at", "2015-06-26 06:40:28.104210"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books/19
+Completed 302 Found in 14ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:40:28 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.2ms)
+  Rendered books/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 117ms (Views: 115.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:43:37 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.9ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (2.7ms)
+  Rendered books/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 187ms (Views: 146.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:43:37 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:44:12 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 134ms (Views: 130.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:44:12 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:44:20 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:44:21 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 116ms (Views: 114.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:44:33 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mu8x06l0iWhIM9wN/BMi7nP2Pm4PL4b/ohzQqCeMh0ID1Zz4RgPdpnQ95voMwOLS75pQtVjkIP5DaNURlxSK3g==", "review"=>{"rating"=>"80", "body"=>"ok"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", "80"], ["body", "ok"], ["created_at", "2015-06-26 06:44:33.039435"], ["updated_at", "2015-06-26 06:44:33.039435"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/books/19
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:44:33 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.6ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 118ms (Views: 115.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:45:42 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:45:43 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 135ms (Views: 133.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:45:45 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 114ms (Views: 112.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/29" for ::1 at 2015-06-26 02:45:46 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.6ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 122ms (Views: 119.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:45:48 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 118ms (Views: 116.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/30" for ::1 at 2015-06-26 02:45:49 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 131ms (Views: 129.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:45:52 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 102ms (Views: 100.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:45:53 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.6ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/_new.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 131ms (Views: 128.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:47:00 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.6ms)
+  Rendered books/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 166ms (Views: 142.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:47:01 -0400
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:47:10 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"99sKPnmW9wyhFyfPf6DXuk3hJL+9HhDkkM8E2bD8BSDG4acVluGjwp0ZHTiPcxeG0Y1KZOrVtuVxuwFgAGQIvA==", "review"=>{"rating"=>"i like this book", "body"=>""}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", "i like this book"], ["body", ""], ["created_at", "2015-06-26 06:47:10.765289"], ["updated_at", "2015-06-26 06:47:10.765289"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/books/19
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:47:10 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 126ms (Views: 123.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:49:14 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WXHoY5r0m+h7SA7MNSASQ/2cYDRq1TX98SiF7WCHqpFoS0VIdYPPJkdGNDvF89J/YfAO7z0ek/wQXIBU0B+nDQ==", "review"=>{"rating"=>"70", "body"=>"cat in hat good"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rating", "70"], ["body", "cat in hat good"], ["book_id", 19], ["created_at", "2015-06-26 06:49:14.859246"], ["updated_at", "2015-06-26 06:49:14.859246"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/books/19
+Completed 302 Found in 40ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:49:14 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1  [["id", 19]]
+  Rendered reviews/_new.html.erb (16.0ms)
+  Rendered books/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 149ms (Views: 146.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:49:18 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1  [["id", 19]]
+  Rendered reviews/_new.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 109ms (Views: 106.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:50:01 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9UExmzL7wFaFXt8am1SFu+u8p0BnTccZTaQrAZTsqD7Ee5yw3YyUmLlQ5e1rh0WHd9DJmzCGYRis0C64JHSlog==", "review"=>{"rating"=>"asd", "body"=>"asdf"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 19]]
+Completed 500 Internal Server Error in 15288ms (ActiveRecord: 7.9ms)
+
+SystemExit (exit):
+  app/controllers/reviews_controller.rb:12:in `create'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (21.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (45.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:51:06 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 159ms (Views: 147.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:51:08 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.1ms)
+  Rendered books/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217755543780'
+  app/views/books/show.html.erb:35:in `_app_views_books_show_html_erb___396026075926408230_70217756423100'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:51:08 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (1.6ms)
+  Rendered books/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+    5:         <th>Rating</th>
+  app/views/reviews/_new.html.erb:2:in `_app_views_reviews__new_html_erb__2677238596647484774_70217744608300'
+  app/views/books/show.html.erb:35:in `_app_views_books_show_html_erb___396026075926408230_70217721618480'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (34.5ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:51:13 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 19]]
+  Rendered reviews/_new.html.erb (2.2ms)
+  Rendered books/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 139ms (Views: 117.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:51:13 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:51:13 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:51:14 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:51:59 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 176ms (Views: 140.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:51:59 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:03 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 145ms (Views: 143.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:52:04 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 130ms (Views: 128.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:06 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 126ms (Views: 124.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:52:08 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 27]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 129ms (Views: 127.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/books/27/reviews" for ::1 at 2015-06-26 02:52:15 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fU6uN/zq9fusA2vu8wmq3p+ME4HqeWBx2AUV7Skp119MdAMcE52hNZANURkD2mriA+B9Wr2yxnA5cRBUmbHaww==", "review"=>{"rating"=>"98", "body"=>"harry potter greate"}, "commit"=>"Submit", "book_id"=>"27"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["rating", "98"], ["body", "harry potter greate"], ["book_id", 27], ["created_at", "2015-06-26 06:52:15.316281"], ["updated_at", "2015-06-26 06:52:15.316281"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books/27
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:52:15 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 27]]
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 139ms (Views: 136.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:17 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 105ms (Views: 103.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/29" for ::1 at 2015-06-26 02:52:18 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 29]]
+  Rendered reviews/_new.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 203ms (Views: 200.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books/29/reviews" for ::1 at 2015-06-26 02:52:25 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CFmuFKQUqc0+j+nL78PFf4kIUnwO2Z+22+X6BRyXKQ05YwM/S2P9AwKB0zwfEAVDFWQ8p1kSObc6kf+8rA8kkQ==", "review"=>{"rating"=>"97", "body"=>"learned a lot"}, "commit"=>"Submit", "book_id"=>"29"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["rating", "97"], ["body", "learned a lot"], ["book_id", 29], ["created_at", "2015-06-26 06:52:25.327160"], ["updated_at", "2015-06-26 06:52:25.327160"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books/29
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books/29" for ::1 at 2015-06-26 02:52:25 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 29]]
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 123ms (Views: 119.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:26 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 142ms (Views: 140.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/30" for ::1 at 2015-06-26 02:52:29 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pgae12ZkkwB4RkXOGi6X1I08Xwl+5oB8O1vV29iLm7SXPDP8iRPHzkRIfznq/VfoEVAx0iktJn3aL9BiaBOWKA==", "id"=>"30"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "books" WHERE "books"."id" = $1  [["id", 30]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:29 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 115ms (Views: 113.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/29" for ::1 at 2015-06-26 02:52:30 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 29]]
+  Rendered reviews/_new.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 152ms (Views: 149.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:31 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:52:33 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 128ms (Views: 125.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books/19/reviews" for ::1 at 2015-06-26 02:52:41 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOJ3tcOMCl5Ra91QAX3j8L/918g75m5U/MwGbCKHCDyl2NqeLPtekG1l56fxriPMI5G5E2wtyFUduAPVkh8FoA==", "review"=>{"rating"=>"95", "body"=>"i would recommend"}, "commit"=>"Submit", "book_id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["rating", "95"], ["body", "i would recommend"], ["book_id", 19], ["created_at", "2015-06-26 06:52:41.094225"], ["updated_at", "2015-06-26 06:52:41.094225"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books/19
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:52:41 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:43 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 110ms (Views: 108.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/27" for ::1 at 2015-06-26 02:52:44 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 27]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 120ms (Views: 117.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:52:47 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:52:48 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 135ms (Views: 131.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:53:59 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 148ms (Views: 140.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:54:00 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 142ms (Views: 141.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:54:03 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gkqd29rxMmA1AamPA+HiZDCAPBEjpmcXJsWAZUAdjeMrcDDwNYZmrgkPk3jzMiJYrOxSynRtwRbHsYXc8IWAfw==", "book"=>{"title"=>"asdf", "author"=>"asdf", "isbn"=>"asdf", "genre"=>"asdf"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "asdf"], ["author", "asdf"], ["isbn", "asdf"], ["genre", "asdf"], ["created_at", "2015-06-26 06:54:03.663984"], ["updated_at", "2015-06-26 06:54:03.663984"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:54:03 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 123ms (Views: 121.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/31" for ::1 at 2015-06-26 02:54:07 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 31]]
+  Rendered reviews/_new.html.erb (3.1ms)
+  Rendered books/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 146ms (Views: 134.0ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/books/31/reviews" for ::1 at 2015-06-26 02:54:09 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IR6viBWcn+wm0xL53dzC06STGjMi/w1msUlFqaro4VAQJAKj+uvLIhrdKA4tDwLvOP906HU0q2dQPUAQGnDszA==", "review"=>{"rating"=>"ats", "body"=>"astat"}, "commit"=>"Submit", "book_id"=>"31"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["rating", "ats"], ["body", "astat"], ["book_id", 31], ["created_at", "2015-06-26 06:54:09.733825"], ["updated_at", "2015-06-26 06:54:09.733825"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/books/31
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books/31" for ::1 at 2015-06-26 02:54:09 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 31]]
+  Rendered reviews/_new.html.erb (1.9ms)
+  Rendered books/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 119ms (Views: 116.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/31" for ::1 at 2015-06-26 02:55:26 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 31]]
+  Rendered reviews/_new.html.erb (2.7ms)
+  Rendered books/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `empty?' for #<Review:0x007fb9b0ded6b0>):
+    1: <%- if !@review.empty? -%>
+    2:   <%= form_for [@book, @review] do |f| %>
+    3:     <table>
+    4:       <tr>
+  app/views/reviews/_new.html.erb:1:in `_app_views_reviews__new_html_erb__2677238596647484774_70217742723840'
+  app/views/books/show.html.erb:35:in `_app_views_books_show_html_erb___396026075926408230_70217721618480'
+
+
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (23.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/paulyun/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (53.2ms)
+
+
+Started GET "/books/31" for ::1 at 2015-06-26 02:55:40 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 31]]
+  Rendered reviews/_new.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 147ms (Views: 144.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:55:40 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:55:43 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 126ms (Views: 124.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/31" for ::1 at 2015-06-26 02:55:45 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 31]]
+  Rendered reviews/_new.html.erb (1.7ms)
+  Rendered books/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 133ms (Views: 130.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/books/31" for ::1 at 2015-06-26 02:55:47 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y9PsbdZvmlzNyuo/I/uS4s7LiFxonJfvo9UKU2X6hCf66UFGORjOkvHE0MjTKFLeUqfmhz9XMe5CoQ/q1WKJuw==", "id"=>"31"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 31]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:55:47 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 128ms (Views: 126.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:55:48 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 130ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:55:52 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P7i30wBTC3uAC2un/b0qop2ONfL553ACWA1RnkHkrIcOghr47yRftbwFUVANbuqeAeJbKa4s1gO5eVQn8XyhGw==", "book"=>{"title"=>"asdfasdf", "author"=>"asdf", "isbn"=>"asdf", "genre"=>"asdf"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "asdfasdf"], ["author", "asdf"], ["isbn", "asdf"], ["genre", "asdf"], ["created_at", "2015-06-26 06:55:52.306620"], ["updated_at", "2015-06-26 06:55:52.306620"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:55:52 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 129ms (Views: 127.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/32" for ::1 at 2015-06-26 02:55:53 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 32]]
+  Rendered reviews/_new.html.erb (0.6ms)
+  Rendered books/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 126ms (Views: 123.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:56:05 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 142ms (Views: 139.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:56:53 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 130ms (Views: 128.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:56:53 -0400
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:56:54 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 139ms (Views: 136.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:56:55 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 198ms (Views: 196.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/32" for ::1 at 2015-06-26 02:56:56 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 32]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 133ms (Views: 130.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/32" for ::1 at 2015-06-26 02:57:04 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1[0m  [["book_id", 32]]
+  Rendered reviews/_new.html.erb (2.1ms)
+  Rendered books/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/32" for ::1 at 2015-06-26 02:59:09 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mReview Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."book_id" = $1 LIMIT 1[0m  [["book_id", 32]]
+  Rendered reviews/_new.html.erb (1.6ms)
+  Rendered books/show.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 141ms (Views: 138.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-980bd16ff7ce56ea83b6e2c44ddfebf0db710baf9c1ecaa51aeb4bb09625dfac.css?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-06-26 02:59:09 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-06-26 02:59:10 -0400
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:11 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/19" for ::1 at 2015-06-26 02:59:13 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReview Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."book_id" = $1 LIMIT 1[0m  [["book_id", 19]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 19]]
+  Rendered reviews/_new.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 115ms (Views: 112.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:15 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 144ms (Views: 142.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/new" for ::1 at 2015-06-26 02:59:16 -0400
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2015-06-26 02:59:20 -0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eLeR0bBLkGvEhIz+q/ZVVko0/p93lsT+1ZdfYiHYbjM2HNsqbZ6j5McKMQKfBlpxUS9ISoV/RIaIljEOB9sJA==", "book"=>{"title"=>"asdfsfds", "author"=>"dfd", "isbn"=>"d", "genre"=>"d"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "books" ("title", "author", "isbn", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "asdfsfds"], ["author", "dfd"], ["isbn", "d"], ["genre", "d"], ["created_at", "2015-06-26 06:59:20.596094"], ["updated_at", "2015-06-26 06:59:20.596094"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:20 -0400
+Processing by BooksController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 141ms (Views: 139.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/33" for ::1 at 2015-06-26 02:59:22 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mReview Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."book_id" = $1 LIMIT 1[0m  [["book_id", 33]]
+  Rendered reviews/_new.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 109ms (Views: 106.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/books/33/reviews" for ::1 at 2015-06-26 02:59:25 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BqCKjn4tiud+vL6Pc0handrblbeYiOYrMxvRHlIecbVIC8B1o/i5aH0yA3NHuFW6wcAjYmphZlNuGr9ydB0Wg==", "review"=>{"rating"=>"d", "body"=>"dd"}, "commit"=>"Submit", "book_id"=>"33"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "reviews" ("rating", "body", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["rating", "d"], ["body", "dd"], ["book_id", 33], ["created_at", "2015-06-26 06:59:25.217767"], ["updated_at", "2015-06-26 06:59:25.217767"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/books/33
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books/33" for ::1 at 2015-06-26 02:59:25 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mReview Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."book_id" = $1 LIMIT 1[0m  [["book_id", 33]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1  [["book_id", 33]]
+  Rendered reviews/_new.html.erb (0.7ms)
+  Rendered books/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 138ms (Views: 135.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:56 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/books/33" for ::1 at 2015-06-26 02:59:57 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tXrf/5loYJPKqMhF5c1v4El1CrXb8AdSmPycGPYwNqmEQHLUdh80Xfam8rIVHq/c1Rlkbow7oVN5iJmhRqg7NQ==", "id"=>"33"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 33]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:57 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 154ms (Views: 152.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/32" for ::1 at 2015-06-26 02:59:58 -0400
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uO/i9xQnd25GfGD/6q9drP+3QTD8PUulOYU9T3jWFl6J1U/c+1AjoHpyWggafJ2QY9sv66v27aTY8Tj2yE4bwg==", "id"=>"32"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 32]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/books" for ::1 at 2015-06-26 02:59:58 -0400
+Processing by BooksController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 149ms (Views: 147.3ms | ActiveRecord: 0.8ms)
